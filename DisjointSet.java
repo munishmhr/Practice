@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
-
+// https://leetcode.com/problems/connecting-cities-with-minimum-cost/solution/
+// Better implementation
 public class DisjointSet {
 
     Map<Integer, Set> mapping = new HashMap<>();
