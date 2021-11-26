@@ -1,7 +1,10 @@
+//https://leetcode.com/problems/graph-valid-tree/
 class Solution {
     public boolean validTree(int n, int[][] edges) {
         DS ds = new DS(n);
         for(int[] edge : edges){
+            // In case both edges alreay exist either they should be pointed to themself. If they are already pointed to same parent and they are adding
+            // another edge between them that means its an circle
             if(ds.findParent(edge[0]).val == ds.findParent(edge[1]).val){
                 return false;
             }
