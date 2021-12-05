@@ -23,7 +23,9 @@ public class DisjointSet {
         if (set.data == set.parent.data) {
             return set;
         }
-        return findParent(set.parent.data);
+        //path compression
+        node.parent = findParent(set.parent.data);
+        return node.parent;
     }
 
     public void union(int num1, int num2) {
